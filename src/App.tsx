@@ -5,6 +5,7 @@ import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/global";
 import FirstSection from "./sections/first/FirstSection";
 import SecondSection from "./sections/second/SecondSection";
+import ThirdSection from "./sections/third/ThirdSection";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
       <FirstSection />
       <SecondSection />
+      <ThirdSection />
     </ThemeProvider>
   );
 }

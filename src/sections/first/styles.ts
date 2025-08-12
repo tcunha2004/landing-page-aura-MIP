@@ -1,10 +1,17 @@
 import styled from "styled-components";
-import ImgTest from "../../assets/banners/test.jpeg";
+import Banner1 from "../../assets/banners/banners_01.jpg";
+
+export const MipLogo = styled.img`
+  height: 2rem;
+  position: relative;
+  top: -3rem;
+  right: -13rem;
+`;
 
 export const Banner = styled.div`
-  height: 650px;
+  height: 640px;
   width: 100%;
-  background-image: url(${ImgTest});
+  background-image: url(${Banner1});
   background-size: cover;
   background-repeat: no-repeat;
 `;
@@ -42,7 +49,7 @@ export const FormContainer = styled.form`
 `;
 
 export const TitleAndFormContainer = styled.div`
-  padding: 4rem 25vw;
+  padding: 4rem 20vw;
   width: 100vw;
   display: flex;
   flex-direction: row;

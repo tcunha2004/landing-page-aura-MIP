@@ -3,8 +3,10 @@ import {
   FormButton,
   FormContainer,
   LabelAndInput,
+  MipLogo,
   TitleAndFormContainer,
 } from "./styles";
+import MipLogoImg from "../../assets/mip-logo.png";
 
 function FirstSection() {
   return (
@@ -12,6 +14,7 @@ function FirstSection() {
       <TitleAndFormContainer>
         <section className="empty"></section>
         <section className="content">
+          <MipLogo src={MipLogoImg} />
           {/* Title */}
           <h1>
             <span className="first-main-title">Tudo de melhor</span>
