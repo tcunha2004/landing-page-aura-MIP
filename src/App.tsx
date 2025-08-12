@@ -1,15 +1,10 @@
 import { ThemeProvider } from "styled-components";
-import {
-  FirstBanner,
-  FormButton,
-  FormContainer,
-  LabelAndInput,
-  TitleAndFormContainer,
-  WhatsAppIcon,
-} from "./App";
+import { WhatsAppIcon } from "./App";
 import WhatsAppImg from "./assets/wpp.png";
 import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/global";
+import FirstSection from "./sections/first/FirstSection";
+import SecondSection from "./sections/second/SecondSection";
 
 function App() {
   return (
@@ -17,54 +12,8 @@ function App() {
       <GlobalStyle />
       <WhatsAppIcon src={WhatsAppImg} />
 
-      <FirstBanner>
-        <TitleAndFormContainer>
-          <section className="empty"></section>
-          <section className="content">
-            {/* Title */}
-            <h1>
-              <span className="first-main-title">Tudo de melhor</span>
-              <br />
-              <span className="first-sub-main-title">ao seu redor</span>
-            </h1>
-            {/* Form */}
-            <FormContainer>
-              <div className="text">
-                <h1>Conquiste o seu melhor lugar.</h1>
-                <h2>Aproveite as condições especiais.</h2>
-              </div>
-
-              <LabelAndInput>
-                <label htmlFor="nome">Nome*</label>
-                <input id="nome" type="text" name="nome" required />
-              </LabelAndInput>
-
-              <LabelAndInput>
-                <label htmlFor="telefone">Telefone*</label>
-                <input id="telefone" type="tel" name="telefone" required />
-              </LabelAndInput>
-
-              <LabelAndInput>
-                <label htmlFor="email">Email*</label>
-                <input id="email" type="email" name="email" required />
-              </LabelAndInput>
-
-              <LabelAndInput>
-                <label htmlFor="interesse">
-                  Qual interesse no empreendimento?
-                </label>
-                <select id="interesse" name="interesse" required>
-                  <option value="">Selecione</option>
-                  <option value="morar">Para Morar</option>
-                  <option value="investir">Para Investir</option>
-                </select>
-              </LabelAndInput>
-
-              <FormButton type="submit">QUERO SABER MAIS</FormButton>
-            </FormContainer>
-          </section>
-        </TitleAndFormContainer>
-      </FirstBanner>
+      <FirstSection />
+      <SecondSection />
     </ThemeProvider>
   );
 }

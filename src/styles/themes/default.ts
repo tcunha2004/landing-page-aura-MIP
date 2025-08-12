@@ -1,15 +1,21 @@
 export const defaultTheme = {
   white: "#fff",
 
+  beige: "#FBE9D1",
+
+  cinza: "#45464A",
+  "cinza-claro": "#626369ff",
+
   "light-pink": "#F7E3C9",
 
-  brown: "#754241",
-  "brown-hover": "#8f5c5bff",
-  "brown-red": "#754141",
+  marrom: "#754241",
+  "marrom-hover": "#8f5c5bff",
+  "marrom-avermelhado": "#754141",
+
+  "preto-gourmet": "#3f3f3fff",
 
   "dark-gray": "#5a5e66ff",
   "light-gray": "#AAAAAA",
-  "black-gourmet": "#3f3f3fff",
 
   blue: "#0000EE",
   "wpp-green": "#00C207",
