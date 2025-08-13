@@ -10,13 +10,15 @@ export const Background = styled.div`
   align-items: center;
 
   padding-top: 5rem;
+  padding-bottom: 5rem;
 `;
 
-export const Title = styled.img`
-  height: 10rem;
-  width: auto;
-`;
-
-export const AuraImage = styled.img`
-  width: 1060px;
+export const Text = styled.p`
+  color: ${(props) => props.theme.beige};
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: MontSerrat;
+  width: 25%;
+  text-align: justify;
+  margin-top: 3rem;
 `;

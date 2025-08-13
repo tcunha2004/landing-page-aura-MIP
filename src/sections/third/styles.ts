@@ -10,14 +10,7 @@ export const Background = styled.div`
   justify-content: space-between;
 `;
 
-export const Title = styled.img`
-  display: block;
-  height: 10rem;
-  width: auto;
-  margin: 0 auto 2rem auto;
-`;
-
 export const Maps = styled.a`
-  width: max-content;
-  height: max-content;
+  width: 100vw;
+  height: auto;
 `;

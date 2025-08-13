@@ -1,6 +1,7 @@
-import { Background, Maps, Title } from "./styles";
+import { Background, Maps } from "./styles";
 import TitleImg from "../../assets/titles/navegue.png";
 import MapsImg from "../../assets/maps.png";
+import { Title } from "../../styled-components/SharebleComponents";
 
 function ThirdSection() {
   return (
