@@ -1,16 +1,19 @@
 import {
-  Banner,
-  FormButton,
   FormContainer,
   LabelAndInput,
   MipLogo,
   TitleAndFormContainer,
 } from "./styles";
 import MipLogoImg from "../../assets/mip-logo.png";
+import {
+  Button,
+  ImageBackground,
+} from "../../styled-components/SharebleComponents";
+import BackgroundImage from "../../assets/banners/banners_01.jpg";
 
 function FirstSection() {
   return (
-    <Banner>
+    <ImageBackground url={BackgroundImage} imageHeight={640}>
       <TitleAndFormContainer>
         <section className="empty"></section>
         <section className="content">
@@ -54,11 +57,18 @@ function FirstSection() {
               </select>
             </LabelAndInput>
 
-            <FormButton type="submit">QUERO SABER MAIS</FormButton>
+            <Button
+              type="submit"
+              backgroundColor="marrom-avermelhado"
+              color="beige"
+              border="no"
+            >
+              QUERO SABER MAIS
+            </Button>
           </FormContainer>
         </section>
       </TitleAndFormContainer>
-    </Banner>
+    </ImageBackground>
   );
 }
 

@@ -1,19 +1,10 @@
 import styled from "styled-components";
-import Banner1 from "../../assets/banners/banners_01.jpg";
 
 export const MipLogo = styled.img`
   height: 2rem;
   position: relative;
   top: -3rem;
   right: -13rem;
-`;
-
-export const Banner = styled.div`
-  height: 640px;
-  width: 100%;
-  background-image: url(${Banner1});
-  background-size: cover;
-  background-repeat: no-repeat;
 `;
 
 export const FormContainer = styled.form`
@@ -97,22 +88,5 @@ export const LabelAndInput = styled.div`
     border-radius: 4px;
     padding: 0.4rem;
     color: ${(props) => props.theme["dark-gray"]};
-  }
-`;
-
-export const FormButton = styled.button`
-  font-family: Montserrat;
-  background-color: ${(props) => props.theme["marrom-avermelhado"]};
-  color: ${(props) => props.theme.white};
-
-  margin-top: 1rem;
-  padding: 1rem;
-  font-size: 1rem;
-  border: none;
-
-  cursor: pointer;
-  transition: background 0.5s;
-  &:hover {
-    background-color: ${(props) => props.theme["marrom-hover"]};
   }
 `;

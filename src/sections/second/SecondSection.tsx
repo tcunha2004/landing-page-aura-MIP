@@ -1,11 +1,17 @@
-import { Banner, Button, TextContainer, TitleImage } from "./styles";
-import Title from "../../assets/titles/o_melhor_de_bh.png";
+import { TextContainer } from "./styles";
+import TitleImage from "../../assets/titles/o_melhor_de_bh.png";
+import {
+  Button,
+  ImageBackground,
+  Title,
+} from "../../styled-components/SharebleComponents";
+import BackgroundImage from "../../assets/banners/banners_02.jpg";
 
 function SecondSection() {
   return (
-    <Banner>
+    <ImageBackground url={BackgroundImage} imageHeight={615}>
       <TextContainer>
-        <TitleImage src={Title} />
+        <Title src={TitleImage} height={12} />
         <p>
           O Aura by MIP é o mais novo lançamento da MIP Construtora de alto
           padrão no Santo Agostinho. Localizado Na Rua Alvarenga Peixoto, em um
@@ -14,9 +20,11 @@ function SecondSection() {
           escolas, praças, hospitais, shoppings e prédios comerciais com acesso
           facilitado às principais avenidas de Belo Horizonte.
         </p>
-        <Button>QUERO MORAR NO SANTO AGOSTINHO</Button>
+        <Button backgroundColor="transparent" border="yes" color="beige">
+          QUERO MORAR NO SANTO AGOSTINHO
+        </Button>
       </TextContainer>
-    </Banner>
+    </ImageBackground>
   );
 }
 

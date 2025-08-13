@@ -19,4 +19,6 @@ export const defaultTheme = {
 
   blue: "#0000EE",
   "wpp-green": "#00C207",
+
+  transparent: "#00000000",
 } as const;

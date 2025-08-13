@@ -10,8 +10,11 @@ import AuraPet from "../../assets/banners/aura_lazer_pet_place.jpg";
 import AuraCoWorking from "../../assets/banners/aura_lazer_coworking.jpg";
 import AuraSauna from "../../assets/banners/aura_lazer_sauna.jpg";
 import AuraPlayGround from "../../assets/banners/aura_lazer_playground.jpg";
-import { Button } from "../second/styles";
-import { AuraImage, Title } from "../../styled-components/SharebleComponents";
+import {
+  AuraImage,
+  Button,
+  Title,
+} from "../../styled-components/SharebleComponents";
 
 function FourthSection() {
   return (
@@ -31,7 +34,9 @@ function FourthSection() {
         Prepare-se para mergulhar em uma experiência única, com lazer para o
         corpo e descanso para mente e alma.
       </Text>
-      <Button>QUERO SABER MAIS</Button>
+      <Button backgroundColor="transparent" border="yes" color="beige">
+        QUERO SABER MAIS
+      </Button>
     </Background>
   );
 }

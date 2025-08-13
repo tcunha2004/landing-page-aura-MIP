@@ -8,6 +8,7 @@ import SecondSection from "./sections/second/SecondSection";
 import ThirdSection from "./sections/third/ThirdSection";
 import FourthSection from "./sections/fourth/FourthSection";
 import FifthSection from "./sections/fifth/FifthSection";
+import SixthSection from "./sections/sixth/SixthSection";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <ThirdSection />
       <FourthSection />
       <FifthSection />
+      <SixthSection />
     </ThemeProvider>
   );
 }

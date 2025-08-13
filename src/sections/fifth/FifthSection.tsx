@@ -1,5 +1,10 @@
-import { AuraImage, Title } from "../../styled-components/SharebleComponents";
-import { AreaNumbers, Background, NumbersContainer } from "./styles";
+import {
+  AuraImage,
+  ImageBackground,
+  Title,
+} from "../../styled-components/SharebleComponents";
+import BackgroundImage from "../../assets/banners/background_piscina.jpg";
+import { AreaNumbers, NumbersContainer } from "./styles";
 import SateliteImage from "../../assets/satelite_image.jpeg";
 import TitleImage from "../../assets/titles/espacos_projetados.png";
 import AreaNumber1 from "../../assets/num_01.png";
@@ -9,7 +14,7 @@ import AreaNumber4 from "../../assets/num_04.png";
 
 function FifthSection() {
   return (
-    <Background>
+    <ImageBackground url={BackgroundImage}>
       <Title src={TitleImage} />
       <AuraImage src={SateliteImage} />
       <NumbersContainer>
@@ -18,7 +23,7 @@ function FifthSection() {
         <AreaNumbers src={AreaNumber3} />
         <AreaNumbers src={AreaNumber4} />
       </NumbersContainer>
-    </Background>
+    </ImageBackground>
   );
 }
 
