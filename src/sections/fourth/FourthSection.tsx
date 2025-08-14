@@ -1,4 +1,4 @@
-import { Background, Text } from "./styles";
+import { Background, Text, TitleFourthSection } from "./styles";
 import TitleImg from "../../assets/titles/area_de_lazer.png";
 import AuraPiscina from "../../assets/banners/aura_lazer_piscina.jpg";
 import AuraAcademia from "../../assets/banners/aura_lazer_acad.jpg";
@@ -10,17 +10,13 @@ import AuraPet from "../../assets/banners/aura_lazer_pet_place.jpg";
 import AuraCoWorking from "../../assets/banners/aura_lazer_coworking.jpg";
 import AuraSauna from "../../assets/banners/aura_lazer_sauna.jpg";
 import AuraPlayGround from "../../assets/banners/aura_lazer_playground.jpg";
-import {
-  AuraImage,
-  Button,
-  Title,
-} from "../../styled-components/SharebleComponents";
+import { AuraImage, Button } from "../../styled-components/SharebleComponents";
 
 function FourthSection() {
   return (
     <Background>
-      <Title src={TitleImg}></Title>
-      <AuraImage src={AuraPiscina} />
+      <TitleFourthSection src={TitleImg} />
+      <AuraImage src={AuraPiscina} marginTop={1} />
       <AuraImage src={AuraAcademia} />
       <AuraImage src={AuraGourmet} />
       <AuraImage src={AuraSalao} />

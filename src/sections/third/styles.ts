@@ -1,16 +1,24 @@
 import styled from "styled-components";
+import { Title } from "../../styled-components/ModelComponents";
+
+export const TitleThirdSection = styled(Title)`
+  height: 12rem;
+  width: auto;
+  margin: 0 auto;
+  padding-top: 3rem;
+`;
 
 export const Background = styled.div`
   height: 640px;
   background-color: ${(props) => props.theme.beige};
-  padding-top: 2rem;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: block;
 `;
 
 export const Maps = styled.a`
   width: 100vw;
   height: auto;
+
+  position: relative;
+  top: 2rem;
 `;

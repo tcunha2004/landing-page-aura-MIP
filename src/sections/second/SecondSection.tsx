@@ -1,9 +1,8 @@
-import { TextContainer } from "./styles";
+import { TextContainer, TitleSecondSection } from "./styles";
 import TitleImage from "../../assets/titles/o_melhor_de_bh.png";
 import {
   Button,
   ImageBackground,
-  Title,
 } from "../../styled-components/SharebleComponents";
 import BackgroundImage from "../../assets/banners/banners_02.jpg";
 
@@ -11,7 +10,7 @@ function SecondSection() {
   return (
     <ImageBackground url={BackgroundImage} imageHeight={615}>
       <TextContainer>
-        <Title src={TitleImage} height={12} />
+        <TitleSecondSection src={TitleImage} />
         <p>
           O Aura by MIP é o mais novo lançamento da MIP Construtora de alto
           padrão no Santo Agostinho. Localizado Na Rua Alvarenga Peixoto, em um

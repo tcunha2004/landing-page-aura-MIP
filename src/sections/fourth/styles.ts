@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import { Title } from "../../styled-components/ModelComponents";
+
+export const TitleFourthSection = styled(Title)`
+  height: 12rem;
+  padding-top: 3rem;
+`;
 
 export const Background = styled.div`
   height: fit-content;
@@ -9,8 +15,7 @@ export const Background = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 `;
 
 export const Text = styled.p`

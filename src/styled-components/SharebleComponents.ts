@@ -31,8 +31,8 @@ export const Button = styled.button<ButtonProps>`
   color: ${(props) => (props.theme as any)[props.color]};
 
   margin-top: 1rem;
-  padding: 1rem;
-  font-size: 1rem;
+  padding: 1.25rem;
+  font-size: 0.9rem;
   border: ${(props) =>
     props.border == "yes" ? `2px solid ${props.theme.beige}` : "none"};
 
@@ -45,17 +45,13 @@ export const Button = styled.button<ButtonProps>`
 
 // ---
 
-interface TitleProps {
-  height?: number;
+interface AuraImageProps {
+  marginTop?: number;
 }
 
-export const Title = styled.img<TitleProps>`
-  display: block;
-  height: ${(props) => (props.height ? `${props.height}rem` : "9rem")};
-  width: auto;
-  margin: 0 auto 2rem auto;
-`;
-
-export const AuraImage = styled.img`
+export const AuraImage = styled.img<AuraImageProps>`
   width: 1060px;
+  margin: ${(props) =>
+    props.marginTop ? `${props.marginTop}rem auto 0` : "0 auto"};
+  display: block;
 `;

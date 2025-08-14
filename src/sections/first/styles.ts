@@ -1,15 +1,20 @@
 import styled from "styled-components";
+import { Title } from "../../styled-components/ModelComponents";
 
 export const MipLogo = styled.img`
   height: 2rem;
   position: relative;
-  top: -3rem;
+  top: -2rem;
   right: -13rem;
+`;
+
+export const TitleFirstSection = styled(Title)`
+  height: 7rem;
 `;
 
 export const FormContainer = styled.form`
   border: solid 1.8px ${(props) => props.theme["marrom-avermelhado"]};
-  margin-top: 1rem;
+  margin-top: -1rem;
   padding: 1rem;
   width: 18rem;
   display: flex;
@@ -39,12 +44,31 @@ export const FormContainer = styled.form`
   }
 `;
 
-export const TitleAndFormContainer = styled.div`
-  padding: 4rem 20vw;
-  width: 100vw;
+export const LabelAndInput = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 3px;
+  font-family: Montserrat;
+
+  label {
+    color: ${(props) => props.theme["marrom-avermelhado"]};
+    font-size: 0.75rem;
+  }
+
+  input,
+  select {
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem;
+    color: ${(props) => props.theme["dark-gray"]};
+  }
+`;
+
+export const TitleAndFormContainer = styled.div`
+  width: fit-content;
+  position: relative;
+  left: 65vw;
+  top: 3rem;
 
   h1 .first-main-title {
     font-family: Merriweather;
@@ -68,25 +92,5 @@ export const TitleAndFormContainer = styled.div`
     display: inline-block;
     transform: scaleX(1.4);
     transform-origin: left center;
-  }
-`;
-
-export const LabelAndInput = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  font-family: Montserrat;
-
-  label {
-    color: ${(props) => props.theme["marrom-avermelhado"]};
-    font-size: 0.75rem;
-  }
-
-  input,
-  select {
-    border: none;
-    border-radius: 4px;
-    padding: 0.4rem;
-    color: ${(props) => props.theme["dark-gray"]};
   }
 `;
