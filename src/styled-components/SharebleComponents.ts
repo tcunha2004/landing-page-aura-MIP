@@ -3,6 +3,7 @@ import styled from "styled-components";
 interface ImageBackgroundProps {
   imageHeight?: number;
   url: string;
+  paddingBottom?: number;
 }
 
 export const ImageBackground = styled.div<ImageBackgroundProps>`
@@ -13,6 +14,9 @@ export const ImageBackground = styled.div<ImageBackgroundProps>`
   background-image: url(${(props) => props.url});
   background-repeat: no-repeat;
   background-size: cover;
+
+  padding-bottom: ${(props) =>
+    props.paddingBottom ? `${props.paddingBottom}rem` : "0"};
 `;
 
 // ---

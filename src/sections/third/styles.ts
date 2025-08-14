@@ -9,7 +9,7 @@ export const TitleThirdSection = styled(Title)`
 `;
 
 export const Background = styled.div`
-  height: 640px;
+  height: auto;
   background-color: ${(props) => props.theme.beige};
 
   display: block;
@@ -18,7 +18,11 @@ export const Background = styled.div`
 export const Maps = styled.a`
   width: 100vw;
   height: auto;
-
   position: relative;
   top: 2rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
