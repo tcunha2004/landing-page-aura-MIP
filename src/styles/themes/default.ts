@@ -3,6 +3,8 @@ export const defaultTheme = {
 
   beige: "#FBE9D1",
 
+  "azul-escuro": "#414755",
+
   cinza: "#45464A",
   "cinza-claro": "#626369ff",
 

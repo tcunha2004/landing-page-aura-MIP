@@ -14,12 +14,18 @@ import EightSection from "./sections/eight/EightSection";
 import NinthSection from "./sections/ninth/NinthSection";
 import TenthSection from "./sections/tenth/TenthSection";
 import EleventhSection from "./sections/eleventh/EleventhSection";
+import Footer from "./sections/footer/Footer";
 
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
-      <WhatsAppIcon src={WhatsAppImg} />
+      <a
+        href="https://api.whatsapp.com/send/?phone=5531992810084&text&type=phone_number&app_absent=0"
+        target="_blank"
+      >
+        <WhatsAppIcon src={WhatsAppImg} />
+      </a>
 
       <FirstSection />
       <SecondSection />
@@ -32,6 +38,7 @@ function App() {
       <NinthSection />
       <TenthSection />
       <EleventhSection />
+      <Footer />
     </ThemeProvider>
   );
 }
