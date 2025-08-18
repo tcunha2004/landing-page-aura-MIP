@@ -11,6 +11,7 @@ import FifthSection from "./sections/fifth/FifthSection";
 import SixthSection from "./sections/sixth/SixthSection";
 import SeventhSection from "./sections/seventh/SeventhSection";
 import EightSection from "./sections/eight/EightSection";
+import NinthSection from "./sections/ninth/NinthSection";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <SixthSection />
       <SeventhSection />
       <EightSection />
+      <NinthSection />
     </ThemeProvider>
   );
 }
