@@ -60,7 +60,7 @@ export const LabelAndInput = styled.div`
     border: none;
     border-radius: 4px;
     padding: 0.4rem;
-    color: ${(props) => props.theme["dark-gray"]};
+    color: ${(props) => props.theme["preto-gourmet"]};
   }
 `;
 
