@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Title } from "../../styled-components/ModelComponents";
 
 export const TitleFourthSection = styled(Title)`
-  height: 12rem;
-  padding-top: 3rem;
+  height: 9rem;
+  margin-top: 6rem;
 `;
 
 export const Background = styled.div`

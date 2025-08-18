@@ -7,13 +7,14 @@ interface ImageBackgroundProps {
 }
 
 export const ImageBackground = styled.div<ImageBackgroundProps>`
-  height: ${(props) =>
-    props.imageHeight ? `${props.imageHeight}px` : "fit-content"};
-  width: 100%;
+  height: ${(props) => (props.imageHeight ? `${props.imageHeight}px` : "auto")};
 
   background-image: url(${(props) => props.url});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: initial;
+
+  width: 100%;
 
   padding-bottom: ${(props) =>
     props.paddingBottom ? `${props.paddingBottom}rem` : "0"};
@@ -54,7 +55,8 @@ interface AuraImageProps {
 }
 
 export const AuraImage = styled.img<AuraImageProps>`
-  width: 1060px;
+  width: 95%;
+  max-width: 1000px;
   margin: ${(props) =>
     props.marginTop ? `${props.marginTop}rem auto 0` : "0 auto"};
   display: block;

@@ -67,8 +67,8 @@ export const LabelAndInput = styled.div`
 export const TitleAndFormContainer = styled.div`
   width: fit-content;
   position: relative;
-  left: 65vw;
-  top: 3rem;
+  left: 69vw;
+  top: 2.5rem;
 
   h1 .first-main-title {
     font-family: Merriweather;

@@ -23,6 +23,7 @@ export const Maps = styled.a`
 
   img {
     width: 100%;
-    height: auto;
+    height: 420px;
+    object-fit: cover;
   }
 `;

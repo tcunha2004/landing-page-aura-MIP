@@ -18,9 +18,7 @@ function FirstSection() {
     <ImageBackground url={BackgroundImage} imageHeight={640}>
       <TitleAndFormContainer>
         <MipLogo src={MipLogoImg} />
-        {/* Title */}
         <TitleFirstSection src={TitleImage} />
-        {/* Form */}
         <FormContainer>
           <div className="text">
             <h1>Conquiste o seu melhor lugar.</h1>
