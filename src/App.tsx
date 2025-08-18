@@ -12,6 +12,7 @@ import SixthSection from "./sections/sixth/SixthSection";
 import SeventhSection from "./sections/seventh/SeventhSection";
 import EightSection from "./sections/eight/EightSection";
 import NinthSection from "./sections/ninth/NinthSection";
+import TenthSection from "./sections/tenth/TenthSection";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <SeventhSection />
       <EightSection />
       <NinthSection />
+      <TenthSection />
     </ThemeProvider>
   );
 }
