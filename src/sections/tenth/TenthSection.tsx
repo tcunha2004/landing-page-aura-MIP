@@ -8,7 +8,7 @@ import TitleImage from "../../assets/titles/leve_o_book.png";
 
 function TenthSection() {
   return (
-    <ImageBackground url={BannerBook} imageHeight={560}>
+    <ImageBackground url={BannerBook} imageHeight={560} positon="center">
       <AlignContainer>
         <TitleTenthSection src={TitleImage} />
         <Text>

@@ -4,6 +4,7 @@ interface ImageBackgroundProps {
   imageHeight?: number;
   url: string;
   paddingBottom?: number;
+  positon?: "center";
 }
 
 export const ImageBackground = styled.div<ImageBackgroundProps>`
@@ -12,7 +13,8 @@ export const ImageBackground = styled.div<ImageBackgroundProps>`
   background-image: url(${(props) => props.url});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: initial;
+  background-position: ${(props) =>
+    props.positon == "center" ? `${props.positon}` : "initial"};
 
   width: 100%;
 
