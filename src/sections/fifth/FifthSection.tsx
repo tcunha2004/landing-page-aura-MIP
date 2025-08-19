@@ -13,7 +13,7 @@ import AreaNumber4 from "../../assets/num_04.png";
 
 function FifthSection() {
   return (
-    <ImageBackground url={BackgroundImage}>
+    <ImageBackground url={BackgroundImage} urlMobile={BackgroundImage}>
       <TitleFifthSection src={TitleImage} />
       <AuraImage src={SateliteImage} marginTop={2} />
       <NumbersContainer>

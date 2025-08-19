@@ -30,6 +30,10 @@ export const TitleSeventhSection = styled(Title)`
   margin: auto;
   position: relative;
   z-index: 2;
+
+  @media (max-width: 600px) {
+    height: 11rem;
+  }
 `;
 
 export const Iframe = styled.iframe`
@@ -43,6 +47,14 @@ export const Iframe = styled.iframe`
 
   @media (max-width: 1024px) {
     width: 90%;
+  }
+
+  @media (max-width: 750px) {
+    height: 300px;
+  }
+
+  @media (max-width: 500px) {
+    height: 200px;
   }
 `;
 

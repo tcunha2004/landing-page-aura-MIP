@@ -8,7 +8,11 @@ import TitleImage from "../../assets/titles/sustentabilidade.png";
 
 function EightSection() {
   return (
-    <ImageBackground url={BackgroundImage} paddingBottom={4}>
+    <ImageBackground
+      url={BackgroundImage}
+      paddingBottom={4}
+      urlMobile={BackgroundImage}
+    >
       <AlignContainer>
         <TitleEightSection src={TitleImage} />
         <UnorderedList>

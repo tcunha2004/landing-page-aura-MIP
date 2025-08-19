@@ -21,25 +21,42 @@ export const MainContent = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 3rem;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 export const AuraByMip = styled.img`
   height: 7rem;
+
+  @media (max-width: 750px) {
+    height: 5rem;
+  }
 `;
 
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
   color: ${(props) => props.theme["azul-escuro"]};
+  text-align: center;
 
   span:first-child {
     font-size: 1.2rem;
     font-weight: 600;
+    @media (max-width: 750px) {
+      font-size: 1rem;
+    }
   }
 
   span:nth-child(2) {
     font-size: 2rem;
     font-weight: 600;
+    @media (max-width: 750px) {
+      font-size: 1.2rem;
+    }
   }
 
   span:nth-child(3) {
@@ -47,12 +64,21 @@ export const Info = styled.div`
     font-size: 1rem;
     font-weight: 600;
   }
+
+  span:nth-child(4) {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 80%;
+    margin: auto;
+  }
 `;
 
 export const IconsContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   margin-top: 1rem;
 `;

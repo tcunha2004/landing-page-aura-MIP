@@ -13,6 +13,8 @@ function TenthSection() {
       imageHeight={560}
       positon="center"
       responsivenessBook="yes"
+      urlMobile={BannerBook}
+      imageHeightMobile={500}
     >
       <AlignContainer>
         <TitleTenthSection src={TitleImage} />

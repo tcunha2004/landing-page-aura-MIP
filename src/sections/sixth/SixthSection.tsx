@@ -12,6 +12,9 @@ function SixthSection() {
       url={BackgroundImage}
       imageHeight={800}
       responsivenessCenter="yes"
+      urlMobile={BackgroundImage}
+      responsivenessRight="yes"
+      imageHeightMobile={450}
     >
       <AlignContainer>
         <TitleSixthSection src={TitleImage} />

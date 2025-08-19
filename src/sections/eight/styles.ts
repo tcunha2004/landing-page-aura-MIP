@@ -11,11 +11,20 @@ export const AlignContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  @media (max-width: 600px) {
+    width: 80%;
+    align-items: center;
+  }
 `;
 
 export const TitleEightSection = styled(Title)`
   height: 9rem;
   margin-top: 4rem;
+
+  @media (max-width: 600px) {
+    height: 6.5rem;
+  }
 `;
 
 export const UnorderedList = styled.ul`
@@ -27,5 +36,9 @@ export const UnorderedList = styled.ul`
 
   li {
     line-height: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
   }
 `;

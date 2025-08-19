@@ -2,8 +2,12 @@ import styled from "styled-components";
 import { Title } from "../../styled-components/ModelComponents";
 
 export const TitleNinthSection = styled(Title)`
-  margin-top: 4rem;
+  margin-top: 3rem;
   height: 9rem;
+
+  @media (max-width: 600px) {
+    height: 5rem;
+  }
 `;
 
 export const Background = styled.div`
@@ -29,6 +33,12 @@ export const IconsContainer = styled.div`
     max-width: 80vw;
     gap: 1rem;
   }
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
 `;
 
 export const IconContainer = styled.div`
@@ -37,6 +47,11 @@ export const IconContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 600px) {
+    height: 10rem;
+    justify-content: center;
+  }
 `;
 
 export const Icon = styled.img`

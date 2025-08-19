@@ -6,6 +6,7 @@ interface ImageBackgroundProps {
   paddingBottom?: number;
   positon?: "center";
   responsivenessCenter?: "yes";
+  responsivenessRight?: "yes";
   responsivenessBook?: "yes";
 
   urlMobile: string;
@@ -35,7 +36,8 @@ export const ImageBackground = styled.div<ImageBackgroundProps>`
   @media (max-width: 600px) {
     background-image: ${({ urlMobile }) =>
       urlMobile ? `url(${urlMobile})` : "none"};
-    background-position: initial;
+    background-position: ${(props) =>
+      props.responsivenessRight == "yes" ? "right" : "initial"};
     height: ${(props) =>
       props.imageHeightMobile ? `${props.imageHeightMobile}px` : "auto"};
   }

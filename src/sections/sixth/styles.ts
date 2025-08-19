@@ -18,6 +18,13 @@ export const AlignContainer = styled.div`
   @media (max-width: 840px) {
     width: 16rem;
   }
+
+  @media (max-width: 600px) {
+    width: 18rem;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+  }
 `;
 
 export const TitleSixthSection = styled(Title)`
@@ -34,4 +41,9 @@ export const Text = styled.p`
   font-size: 0.85rem;
   font-family: MontSerrat;
   line-height: 1.25rem;
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+    text-align: center;
+  }
 `;

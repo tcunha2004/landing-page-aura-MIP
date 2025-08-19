@@ -10,7 +10,7 @@ import TitleImage from "../../assets/titles/ficha.png";
 
 function EleventhSection() {
   return (
-    <BackgroundEleventhSection url={BackgroundImage}>
+    <BackgroundEleventhSection url={BackgroundImage} imageHeightMobile={450}>
       <Overlay />
       <TitleEleventhSection src={TitleImage} />
       <CreditsContainer>

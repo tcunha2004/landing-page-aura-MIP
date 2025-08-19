@@ -90,7 +90,7 @@ export const TitleAndFormContainer = styled.div`
   @media (max-width: 600px) {
     left: 50%;
     transform: translateX(-50%);
-    top: 18rem;
+    top: 35%;
     width: 80vw;
   }
 `;

@@ -18,6 +18,13 @@ export const BackgroundEleventhSection = styled(
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  @media (max-width: 750px) {
+    height: ${(props) =>
+      props.imageHeightMobile ? `${props.imageHeightMobile}px` : "auto"};
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10%;
+  }
 `;
 
 export const Overlay = styled.div`
@@ -44,8 +51,12 @@ export const CreditsContainer = styled.div`
   gap: 1rem;
   align-items: flex-start;
   justify-content: center;
-
   width: fit-content;
+
+  @media (max-width: 750px) {
+    text-align: center;
+    align-items: center;
+  }
 `;
 
 export const Companies = styled.div`

@@ -27,7 +27,7 @@ export const TextContainer = styled.div`
   @media (max-width: 600px) {
     top: 4.5rem;
     left: 10%;
-    width: 350px;
+    width: 80%;
 
     p {
       width: 80%;

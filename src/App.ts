@@ -8,5 +8,16 @@ export const WhatsAppIcon = styled.img`
   z-index: 10;
   position: fixed;
   top: 65vh;
-  right: 1.5%;
+  right: 1.5vw;
+
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 70%;
+  }
+
+  @media (max-width: 1024px) {
+    top: 92vh;
+    right: 2vw;
+  }
 `;

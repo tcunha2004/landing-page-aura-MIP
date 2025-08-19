@@ -21,7 +21,7 @@ function FirstSection() {
       urlMobile={BackgroundImageMobile}
       imageHeight={640}
       responsivenessCenter="yes"
-      imageHeightMobile={700}
+      imageHeightMobile={640}
     >
       <TitleAndFormContainer>
         <MipLogo src={MipLogoImg} />

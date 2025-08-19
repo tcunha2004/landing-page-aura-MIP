@@ -7,6 +7,7 @@ export const Title = styled.img`
 
 interface ParallaxBackgroundProps {
   paddingBottom?: number;
+  imageHeightMobile?: number;
 }
 
 export const ParallaxBackground = styled.div<ParallaxBackgroundProps>`
