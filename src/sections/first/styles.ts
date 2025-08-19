@@ -6,10 +6,18 @@ export const MipLogo = styled.img`
   position: relative;
   top: -2rem;
   right: -13rem;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const TitleFirstSection = styled(Title)`
   height: 7rem;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const FormContainer = styled.form`
@@ -42,6 +50,11 @@ export const FormContainer = styled.form`
       color: ${(props) => props.theme["preto-gourmet"]};
     }
   }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 export const LabelAndInput = styled.div`
@@ -70,31 +83,14 @@ export const TitleAndFormContainer = styled.div`
   left: 69vw;
   top: 2.5rem;
 
-  h1 .first-main-title {
-    font-family: Merriweather;
-    color: ${(props) => props.theme["marrom-avermelhado"]};
-    font-weight: lighter;
-    font-size: 2.4rem;
-    line-height: 40px;
-
-    display: inline-block;
-    transform: scaleY(1.1);
-    transform-origin: left center;
-  }
-
-  h1 .first-sub-main-title {
-    font-family: Birthstone;
-    color: ${(props) => props.theme["preto-gourmet"]};
-    font-weight: 600;
-    font-size: 3.85rem;
-    line-height: 40px;
-
-    display: inline-block;
-    transform: scaleX(1.4);
-    transform-origin: left center;
-  }
-
   @media (max-width: 1024px) {
     left: 60vw;
+  }
+
+  @media (max-width: 600px) {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 18rem;
+    width: 80vw;
   }
 `;

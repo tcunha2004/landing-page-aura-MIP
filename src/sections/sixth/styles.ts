@@ -14,10 +14,18 @@ export const AlignContainer = styled.div`
   @media (max-width: 1024px) {
     width: 20rem;
   }
+
+  @media (max-width: 840px) {
+    width: 16rem;
+  }
 `;
 
 export const TitleSixthSection = styled(Title)`
   height: 9rem;
+
+  @media (max-width: 840px) {
+    height: 6rem;
+  }
 `;
 
 export const Text = styled.p`

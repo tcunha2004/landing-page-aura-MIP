@@ -12,6 +12,8 @@ function SecondSection() {
       url={BackgroundImage}
       imageHeight={615}
       responsivenessCenter="yes"
+      urlMobile={BackgroundImage}
+      imageHeightMobile={500}
     >
       <TextContainer>
         <TitleSecondSection src={TitleImage} />

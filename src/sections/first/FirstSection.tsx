@@ -12,13 +12,16 @@ import {
 } from "../../styled-components/SharebleComponents";
 import BackgroundImage from "../../assets/banners/banners_01.jpg";
 import TitleImage from "../../assets/titles/tudo_de_melhor.png";
+import BackgroundImageMobile from "../../assets/banners/first_banner_mobile.jpg";
 
 function FirstSection() {
   return (
     <ImageBackground
       url={BackgroundImage}
+      urlMobile={BackgroundImageMobile}
       imageHeight={640}
       responsivenessCenter="yes"
+      imageHeightMobile={700}
     >
       <TitleAndFormContainer>
         <MipLogo src={MipLogoImg} />

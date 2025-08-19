@@ -19,4 +19,8 @@ export const AreaNumbers = styled.img`
   @media (max-width: 1024px) {
     width: 12rem;
   }
+
+  @media (max-width: 840px) {
+    width: 9.5rem;
+  }
 `;

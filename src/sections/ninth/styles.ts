@@ -42,6 +42,11 @@ export const IconContainer = styled.div`
 export const Icon = styled.img`
   height: 10rem;
   width: 10rem;
+
+  @media (max-width: 900px) {
+    height: 7rem;
+    width: 7rem;
+  }
 `;
 
 export const IconText = styled.span`

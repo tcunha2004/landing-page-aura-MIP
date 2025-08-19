@@ -1,23 +1,25 @@
 import styled from "styled-components";
 
 interface ImageBackgroundProps {
-  imageHeight?: number;
   url: string;
+  imageHeight?: number;
   paddingBottom?: number;
   positon?: "center";
   responsivenessCenter?: "yes";
   responsivenessBook?: "yes";
+
+  urlMobile: string;
+  imageHeightMobile?: number;
 }
 
 export const ImageBackground = styled.div<ImageBackgroundProps>`
-  height: ${(props) => (props.imageHeight ? `${props.imageHeight}px` : "auto")};
-
   background-image: url(${(props) => props.url});
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: ${(props) =>
     props.positon == "center" ? `${props.positon}` : "initial"};
-  width: 100%;
+  height: ${(props) => (props.imageHeight ? `${props.imageHeight}px` : "auto")};
+  background-repeat: no-repeat;
+  width: 100vw;
   padding-bottom: ${(props) =>
     props.paddingBottom ? `${props.paddingBottom}rem` : "0"};
 
@@ -28,6 +30,14 @@ export const ImageBackground = styled.div<ImageBackgroundProps>`
         : responsivenessBook === "yes"
         ? "-22rem"
         : "initial"};
+  }
+
+  @media (max-width: 600px) {
+    background-image: ${({ urlMobile }) =>
+      urlMobile ? `url(${urlMobile})` : "none"};
+    background-position: initial;
+    height: ${(props) =>
+      props.imageHeightMobile ? `${props.imageHeightMobile}px` : "auto"};
   }
 `;
 
@@ -56,6 +66,11 @@ export const Button = styled.button<ButtonProps>`
   transition: opacity 0.5s;
   &:hover {
     opacity: 80%;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 0.75rem;
+    padding: 1rem;
   }
 `;
 

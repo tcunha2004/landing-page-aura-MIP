@@ -6,6 +6,11 @@ export const TitleThirdSection = styled(Title)`
   width: auto;
   margin: 0 auto;
   padding-top: 3rem;
+
+  @media (max-width: 600px) {
+    height: 8rem;
+    padding-top: 2rem;
+  }
 `;
 
 export const Background = styled.div`
@@ -25,5 +30,15 @@ export const Maps = styled.a`
     width: 100%;
     height: 420px;
     object-fit: cover;
+
+    @media (max-width: 600px) {
+      height: 550px;
+      object-position: -45rem;
+    }
+
+    @media (max-width: 500px) {
+      height: 750px;
+      object-position: -78rem;
+    }
   }
 `;
