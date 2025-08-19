@@ -14,8 +14,6 @@ function SeventhSection() {
       <Overlay />
       <TitleSeventhSection src={TitleImage} />
       <Iframe
-        width="900"
-        height="500"
         src="https://www.youtube-nocookie.com/embed/Lh_I55QkBKQ?si=rqWttVdk5Z7nwL74&amp;controls=0"
         title="YouTube video player"
         frameBorder="0"

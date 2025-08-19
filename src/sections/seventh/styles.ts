@@ -38,6 +38,12 @@ export const Iframe = styled.iframe`
   top: 0rem;
   left: 50%;
   transform: translate(-50%);
+  width: 900px;
+  height: 500px;
+
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
 `;
 
 export const ButtonParallax = styled(Button)`

@@ -5,8 +5,8 @@ export const WhatsAppIcon = styled.img`
   height: 60px;
   border-radius: 4px;
 
-  z-index: 99;
+  z-index: 10;
   position: fixed;
   top: 65vh;
-  right: 1%;
+  right: 1.5%;
 `;

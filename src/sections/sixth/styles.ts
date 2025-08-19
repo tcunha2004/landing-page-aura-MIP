@@ -4,14 +4,16 @@ import { Title } from "../../styled-components/ModelComponents";
 export const AlignContainer = styled.div`
   height: 100%;
   width: 25rem;
-
   position: relative;
   left: 55%;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    width: 20rem;
+  }
 `;
 
 export const TitleSixthSection = styled(Title)`

@@ -24,6 +24,11 @@ export const IconsContainer = styled.div`
   gap: 5rem;
   max-width: 60rem;
   margin: 1rem auto 4rem;
+
+  @media (max-width: 1024px) {
+    max-width: 80vw;
+    gap: 1rem;
+  }
 `;
 
 export const IconContainer = styled.div`

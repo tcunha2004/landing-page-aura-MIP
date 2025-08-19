@@ -15,4 +15,8 @@ export const NumbersContainer = styled.div`
   padding: 3rem;
 `;
 
-export const AreaNumbers = styled.img``;
+export const AreaNumbers = styled.img`
+  @media (max-width: 1024px) {
+    width: 12rem;
+  }
+`;

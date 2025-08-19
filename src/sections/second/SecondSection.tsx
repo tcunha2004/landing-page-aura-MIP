@@ -8,7 +8,11 @@ import BackgroundImage from "../../assets/banners/banners_02.jpg";
 
 function SecondSection() {
   return (
-    <ImageBackground url={BackgroundImage} imageHeight={615}>
+    <ImageBackground
+      url={BackgroundImage}
+      imageHeight={615}
+      responsivenessCenter="yes"
+    >
       <TextContainer>
         <TitleSecondSection src={TitleImage} />
         <p>

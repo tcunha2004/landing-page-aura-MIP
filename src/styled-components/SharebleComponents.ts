@@ -5,6 +5,8 @@ interface ImageBackgroundProps {
   url: string;
   paddingBottom?: number;
   positon?: "center";
+  responsivenessCenter?: "yes";
+  responsivenessBook?: "yes";
 }
 
 export const ImageBackground = styled.div<ImageBackgroundProps>`
@@ -15,11 +17,18 @@ export const ImageBackground = styled.div<ImageBackgroundProps>`
   background-size: cover;
   background-position: ${(props) =>
     props.positon == "center" ? `${props.positon}` : "initial"};
-
   width: 100%;
-
   padding-bottom: ${(props) =>
     props.paddingBottom ? `${props.paddingBottom}rem` : "0"};
+
+  @media (max-width: 1200px) {
+    background-position: ${({ responsivenessCenter, responsivenessBook }) =>
+      responsivenessCenter === "yes"
+        ? "center"
+        : responsivenessBook === "yes"
+        ? "-22rem"
+        : "initial"};
+  }
 `;
 
 // ---

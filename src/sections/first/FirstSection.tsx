@@ -15,7 +15,11 @@ import TitleImage from "../../assets/titles/tudo_de_melhor.png";
 
 function FirstSection() {
   return (
-    <ImageBackground url={BackgroundImage} imageHeight={640}>
+    <ImageBackground
+      url={BackgroundImage}
+      imageHeight={640}
+      responsivenessCenter="yes"
+    >
       <TitleAndFormContainer>
         <MipLogo src={MipLogoImg} />
         <TitleFirstSection src={TitleImage} />

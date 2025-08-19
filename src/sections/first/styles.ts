@@ -93,4 +93,8 @@ export const TitleAndFormContainer = styled.div`
     transform: scaleX(1.4);
     transform-origin: left center;
   }
+
+  @media (max-width: 1024px) {
+    left: 60vw;
+  }
 `;

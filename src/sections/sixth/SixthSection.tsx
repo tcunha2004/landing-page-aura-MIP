@@ -8,7 +8,11 @@ import { AlignContainer, Text, TitleSixthSection } from "./styles";
 
 function SixthSection() {
   return (
-    <ImageBackground url={BackgroundImage} imageHeight={800}>
+    <ImageBackground
+      url={BackgroundImage}
+      imageHeight={800}
+      responsivenessCenter="yes"
+    >
       <AlignContainer>
         <TitleSixthSection src={TitleImage} />
         <Text>
