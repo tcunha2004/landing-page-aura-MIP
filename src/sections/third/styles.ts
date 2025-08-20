@@ -19,26 +19,3 @@ export const Background = styled.div`
 
   display: block;
 `;
-
-export const Maps = styled.a`
-  width: 100vw;
-  height: auto;
-  position: relative;
-  top: 2rem;
-
-  img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-
-    @media (max-width: 600px) {
-      height: 550px;
-      object-position: -45rem;
-    }
-
-    @media (max-width: 500px) {
-      height: 750px;
-      object-position: -78rem;
-    }
-  }
-`;
