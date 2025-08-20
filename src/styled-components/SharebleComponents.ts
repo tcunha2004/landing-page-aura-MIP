@@ -4,21 +4,27 @@ interface ImageBackgroundProps {
   url: string;
   imageHeight?: number;
   paddingBottom?: number;
-  positon?: "center";
+  position?: "center";
   responsivenessCenter?: "yes";
   responsivenessRight?: "yes";
   responsivenessBook?: "yes";
 
   urlMobile: string;
   imageHeightMobile?: number;
+
+  fullBackground?: "yes";
 }
 
 export const ImageBackground = styled.div<ImageBackgroundProps>`
   background-image: url(${(props) => props.url});
   background-size: cover;
   background-position: ${(props) =>
-    props.positon == "center" ? `${props.positon}` : "initial"};
-  height: ${(props) => (props.imageHeight ? `${props.imageHeight}px` : "auto")};
+    props.position == "center" ? `${props.position}` : "initial"};
+  height: ${(props) => {
+    if (props.fullBackground === "yes") return "100vh";
+    if (props.imageHeight) return `${props.imageHeight}px`;
+    return "auto";
+  }};
   background-repeat: no-repeat;
   width: 100vw;
   padding-bottom: ${(props) =>

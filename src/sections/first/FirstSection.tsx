@@ -14,6 +14,7 @@ import BackgroundImage from "../../assets/banners/banners_01.jpg";
 import TitleImage from "../../assets/titles/tudo_de_melhor.png";
 import BackgroundImageMobile from "../../assets/banners/first_banner_mobile.jpg";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function FirstSection() {
   // valores iniciais do form
@@ -93,18 +94,24 @@ function FirstSection() {
       "https://cvcrm-proxy.vercel.app/api/lead",
       options
     );
-
     const data = await response.json();
-
-    console.log(data);
+    return data;
   }
 
+  const navigate = useNavigate();
+
   // ao dar o submit
-  function submitDataToCRM(e: any) {
+  async function submitDataToCRM(e: any) {
     e.preventDefault();
 
-    // ENVIAR PRO CRM
-    sendToCV();
+    try {
+      const result = await sendToCV(); // espera a resposta da API
+      console.log(result);
+
+      navigate("/thanks"); // só executa depois do fetch responder
+    } catch (err) {
+      console.error("Erro ao enviar:", err);
+    }
   }
 
   return (

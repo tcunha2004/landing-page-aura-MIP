@@ -11,7 +11,7 @@ function TenthSection() {
     <ImageBackground
       url={BannerBook}
       imageHeight={560}
-      positon="center"
+      position="center"
       responsivenessBook="yes"
       urlMobile={BannerBook}
       imageHeightMobile={500}
