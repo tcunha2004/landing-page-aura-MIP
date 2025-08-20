@@ -81,21 +81,7 @@ function FirstSection() {
   }
 
   async function sendToCV() {
-    const options = {
-      method: "POST",
-      headers: {
-        accept: "application/json",
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    };
-
-    const response = await fetch(
-      "https://cvcrm-proxy.vercel.app/api/lead",
-      options
-    );
-    const data = await response.json();
-    return data;
+    console.log("Safety: Send to CRM")
   }
 
   const navigate = useNavigate();
@@ -104,14 +90,7 @@ function FirstSection() {
   async function submitDataToCRM(e: any) {
     e.preventDefault();
 
-    try {
-      const result = await sendToCV(); // espera a resposta da API
-      console.log(result);
-
-      navigate("/thanks"); // só executa depois do fetch responder
-    } catch (err) {
-      console.error("Erro ao enviar:", err);
-    }
+    navigate("/thanks"); // só executa depois do fetch responder
   }
 
   return (
