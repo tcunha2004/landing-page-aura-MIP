@@ -13,32 +13,99 @@ import {
 import BackgroundImage from "../../assets/banners/banners_01.jpg";
 import TitleImage from "../../assets/titles/tudo_de_melhor.png";
 import BackgroundImageMobile from "../../assets/banners/first_banner_mobile.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function FirstSection() {
+  // valores iniciais do form
   const [formData, setFormData] = useState({
     nome: "",
     telefone: "",
     email: "",
-    interesse: "",
+    tags: "", // interesse
+
+    permitir_alteracao: true,
+    email_gestor: "thiago.cunha@mip.com.br",
+    idempreendimento: 24,
+    converter: true,
+    idsituacao: 1,
   });
 
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) {
-    let actualValue = e.target.value;
-    let actualName = e.target.name;
+  // pega UTMs
+  function getUTMs() {
+    const urlParams = new URLSearchParams(window.location.search);
+    let origem = urlParams.get("utm_source");
+    let midia = urlParams.get("utm_medium");
+    let campanha = urlParams.get("utm_campaign");
+
+    // Fallback: tráfego orgânico via Google
+    const ref = document.referrer;
+    const veioDoGoogle = ref.includes("google.");
+
+    if (!origem && veioDoGoogle) {
+      origem = "GO";
+      midia = "busca-organica";
+      campanha = "AURA-busca-organica";
+    }
+
+    console.log("UTMs detectadas:", {
+      origem,
+      midia,
+      campanha,
+    });
+
     setFormData((prev) => ({
       ...prev,
-      [actualName]: actualValue,
+      ["origem"]: origem,
+      ["midia"]: midia,
+      ["campanha"]: campanha,
     }));
   }
 
-  function dataToCRM(e: any) {
+  // ao carregar a pagina pega as UTMs
+  useEffect(() => {
+    getUTMs();
+  }, []);
+
+  // ao digitar nos inputs
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) {
+    const actualValue = e.target.value;
+    const actualName = e.target.name;
+    setFormData((prev) => ({
+      ...prev,
+      [actualName]:
+        actualName === "tags" ? ["Interesse:" + actualValue] : actualValue, // se for "tags" guarda num array
+    }));
+  }
+
+  async function sendToCV() {
+    const options = {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+        token: "72d919236350de7e54850a0cfa83096b573b0016",
+      },
+      body: JSON.stringify(formData),
+    };
+
+    const response = await fetch(
+      "https://cvcrm-proxy.vercel.app/api/lead",
+      options
+    );
+
+    const data = await response.json();
+
+    console.log(data);
+  }
+
+  // ao dar o submit
+  function submitDataToCRM(e: any) {
     e.preventDefault();
 
     // ENVIAR PRO CRM
-    console.log(formData);
+    sendToCV();
   }
 
   return (
@@ -52,7 +119,7 @@ function FirstSection() {
       <TitleAndFormContainer>
         <MipLogo src={MipLogoImg} />
         <TitleFirstSection src={TitleImage} />
-        <FormContainer onSubmit={dataToCRM}>
+        <FormContainer onSubmit={submitDataToCRM}>
           <div className="text">
             <h1>Conquiste o seu melhor lugar.</h1>
             <h2>Aproveite as condições especiais.</h2>
@@ -64,6 +131,7 @@ function FirstSection() {
               id="nome"
               type="text"
               name="nome"
+              placeholder="Nome Completo"
               onChange={handleChange}
               required
             />
@@ -75,6 +143,8 @@ function FirstSection() {
               id="telefone"
               type="tel"
               name="telefone"
+              pattern="^\(?\d{2}\)?[\s]?\d{4,5}[\s]?\d{4}$"
+              placeholder="DDD + telefone"
               onChange={handleChange}
               required
             />
@@ -86,6 +156,7 @@ function FirstSection() {
               id="email"
               type="email"
               name="email"
+              placeholder="E-mail"
               onChange={handleChange}
               required
             />
@@ -93,12 +164,7 @@ function FirstSection() {
 
           <LabelAndInput>
             <label htmlFor="interesse">Qual interesse no empreendimento?</label>
-            <select
-              id="interesse"
-              name="interesse"
-              onChange={handleChange}
-              required
-            >
+            <select id="interesse" name="tags" onChange={handleChange} required>
               <option value="">Selecione</option>
               <option value="morar">Para Morar</option>
               <option value="investir">Para Investir</option>
