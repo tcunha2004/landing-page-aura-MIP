@@ -85,7 +85,6 @@ function FirstSection() {
       headers: {
         accept: "application/json",
         "content-type": "application/json",
-        token: "72d919236350de7e54850a0cfa83096b573b0016",
       },
       body: JSON.stringify(formData),
     };
