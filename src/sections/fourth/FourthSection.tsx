@@ -22,7 +22,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function FourthSection() {
+interface AcceptScrollFunction {
+  func: () => void
+}
+
+function FourthSection(props: AcceptScrollFunction) {
   const images = [
     AuraPiscina,
     AuraAcademia,
@@ -69,7 +73,7 @@ function FourthSection() {
         corpo e descanso para mente e alma.
       </Text>
 
-      <Button backgroundColor="transparent" border="yes" color="beige">
+      <Button onClick={props.func} backgroundColor="transparent" border="yes" color="beige">
         QUERO SABER MAIS
       </Button>
     </Background>

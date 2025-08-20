@@ -6,7 +6,11 @@ import {
 } from "../../styled-components/SharebleComponents";
 import BackgroundImage from "../../assets/banners/banners_02.jpg";
 
-function SecondSection() {
+interface AcceptScrollFunction {
+  func: () => void
+}
+
+function SecondSection(props: AcceptScrollFunction) {
   return (
     <ImageBackground
       url={BackgroundImage}
@@ -25,7 +29,7 @@ function SecondSection() {
           escolas, praças, hospitais, shoppings e prédios comerciais com acesso
           facilitado às principais avenidas de Belo Horizonte.
         </p>
-        <Button backgroundColor="transparent" border="yes" color="beige">
+        <Button onClick={props.func} backgroundColor="transparent" border="yes" color="beige">
           QUERO MORAR NO SANTO AGOSTINHO
         </Button>
       </TextContainer>

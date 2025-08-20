@@ -8,6 +8,9 @@ import { AlignContainer, TextThanks, TitleThanks } from "./styles";
 import TitleImage from "../../assets/titles/parabens.png";
 
 function Thanks() {
+
+  const ebook = "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F167562%2F1719005896MIP_0009_24_AURA_BOOK_CLIENTE_DIGITAL.pdf"
+
   return (
     <ImageBackground url={Banner} urlMobile={BannerMobile} fullBackground="yes">
       <AlignContainer>
@@ -22,7 +25,7 @@ function Thanks() {
             inigualável.
           </span>
         </TextThanks>
-        <Button backgroundColor="marrom-avermelhado" border="no" color="beige">
+        <Button onClick={() => window.open(ebook, "_blank")} backgroundColor="marrom-avermelhado" border="no" color="beige">
           BAIXE O BOOK
         </Button>
       </AlignContainer>

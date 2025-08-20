@@ -8,7 +8,11 @@ import {
 import ParallaxImage from "../../assets/banners/parallax_1.jpg";
 import TitleImage from "../../assets/titles/encontre-se.png";
 
-function SeventhSection() {
+interface AcceptScrollFunction {
+  func: () => void
+}
+
+function SeventhSection(props: AcceptScrollFunction) {
   return (
     <BackgroundSeventhSection url={ParallaxImage} paddingBottom={4}>
       <Overlay />
@@ -21,7 +25,7 @@ function SeventhSection() {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></Iframe>
-      <ButtonParallax backgroundColor="light-pink" border="no" color="marrom">
+      <ButtonParallax onClick={props.func} backgroundColor="light-pink" border="no" color="marrom">
         CADASTRE-SE AGORA
       </ButtonParallax>
     </BackgroundSeventhSection>

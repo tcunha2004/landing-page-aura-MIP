@@ -10,7 +10,7 @@ export const AlignContainer = styled.div`
   position: relative;
   top: 10%;
   left: 15%;
-  height: 100vh;
+  height: 90vh;
   width: 20rem;
   display: flex;
   flex-direction: column;

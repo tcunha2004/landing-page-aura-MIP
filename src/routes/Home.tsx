@@ -14,6 +14,11 @@ import EleventhSection from "../sections/eleventh/EleventhSection";
 import Footer from "../sections/footer/Footer";
 
 function Home() {
+
+  function scrollUp() {
+    document.getElementById("scrollUp")?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <>
       <a
@@ -24,14 +29,14 @@ function Home() {
       </a>
 
       <FirstSection />
-      <SecondSection />
+      <SecondSection func={scrollUp} />
       <ThirdSection />
-      <FourthSection />
+      <FourthSection func={scrollUp} />
       <FifthSection />
-      <SixthSection />
-      <SeventhSection />
-      <EightSection />
-      <NinthSection />
+      <SixthSection func={scrollUp} />
+      <SeventhSection func={scrollUp} />
+      <EightSection func={scrollUp} />
+      <NinthSection func={scrollUp} />
       <TenthSection />
       <EleventhSection />
       <Footer />

@@ -6,7 +6,11 @@ import BackgroundImage from "../../assets/banners/banners_03.jpg";
 import TitleImage from "../../assets/titles/viva_em _um.png";
 import { AlignContainer, Text, TitleSixthSection } from "./styles";
 
-function SixthSection() {
+interface AcceptScrollFunction {
+  func: () => void
+}
+
+function SixthSection(props: AcceptScrollFunction) {
   return (
     <ImageBackground
       url={BackgroundImage}
@@ -23,7 +27,7 @@ function SixthSection() {
           celebração. O Aura by MIP é o lugar onde sua mente, corpo e alma
           sentem-se em casa.
         </Text>
-        <Button backgroundColor="marrom-avermelhado" border="no" color="beige">
+        <Button onClick={props.func} backgroundColor="marrom-avermelhado" border="no" color="beige">
           CONVERSE COM UM CONSULTOR
         </Button>
       </AlignContainer>

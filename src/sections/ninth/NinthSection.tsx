@@ -16,7 +16,11 @@ import IconPi from "../../assets/icons/aura_portaria.png";
 import IconW from "../../assets/icons/aura_wifi.png";
 import { Button } from "../../styled-components/SharebleComponents";
 
-function NinthSection() {
+interface AcceptScrollFunction {
+  func: () => void
+}
+
+function NinthSection(props: AcceptScrollFunction) {
   return (
     <Background>
       <TitleNinthSection src={TitleImage} />
@@ -52,7 +56,7 @@ function NinthSection() {
           <IconText>Portão eletrônico controlado pela portaria</IconText>
         </IconContainer>
       </IconsContainer>
-      <Button backgroundColor="white" border="no" color="marrom-avermelhado">
+      <Button onClick={props.func} backgroundColor="white" border="no" color="marrom-avermelhado">
         CONVERSE COM UM CONSULTOR
       </Button>
     </Background>
