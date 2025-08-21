@@ -80,15 +80,17 @@ function FirstSection() {
     }));
   }
 
-  async function sendToCV() {
-    console.log("Safety: Send to CRM")
-  }
+  // async function sendToCV() {
+  //   console.log("Safety: Send to CRM")
+  // }
 
   const navigate = useNavigate();
 
   // ao dar o submit
   async function submitDataToCRM(e: any) {
     e.preventDefault();
+
+    formData
 
     navigate("/thanks"); // só executa depois do fetch responder
   }
